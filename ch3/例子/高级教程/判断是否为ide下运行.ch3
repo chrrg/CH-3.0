@@ -1,0 +1,4 @@
+
+if(isdebug(),msgbox("在ide下运行！");,msgbox("exe方式下运行");)//判断是否ide下运行
+
+//ide下返回true，输出exe后运行返回false

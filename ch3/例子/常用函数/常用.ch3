@@ -1,0 +1,60 @@
+//比较常用的函数
+cls();//清屏函数
+print("输出");//在独立exe下无显示。
+line("输出并新起一行");
+lprint('输出');//新起一行并输出
+printl('换行');//输出再新起一行 和line一样
+//以上函数仅编辑器中可看到效果
+timer;//输出一个时间
+gettickcount;//输出从开机到现在的时间
+msgbox('123');//弹出一个对话框
+//msgbox 缩写m  即两者功能完全一样
+m('1234',1,"标题");//带有确定取消的对话框
+eval('$b=0;$b++;');//再计算 函数
+
+line('当前b的值:'.$b);
+line('屏幕宽'+screenwidth/15);//屏幕宽  缩写 sw
+line('屏幕高'+screenheight/15);//屏幕宽  缩写 sh
+/*
+shell('d:\code.exe');
+shell('d:\code.exe',1);//高级运行
+*/
+apppath();//返回当前工作目录  最末 位 永远带\
+
+//delay(100);//程序延时100ms 程序不会假死
+//sleep(100);//程序休眠100ms 程序会假死
+
+$path="d:\aaa.txt";
+if(existfile($path),
+	filelen($path);//输出文件长度
+,
+	print('没有找到此文件!');
+);
+
+//existfile 判断文件是否存在  返回真假值
+//dir  判断文件或文件夹是否存在   返回字符串
+//existdir 判断文件夹是否存在  返回真假值
+
+$path="d:\擦拭.txt";
+if(existfile($path),
+	$res=readfile($path);//读取文件
+,
+	writefile($path,"测试数据");
+	$res=readfile($path);//读取文件
+);
+appendfile($path,now.crlf);//文件追加数据
+$res;
+
+//readfile  缩写rf
+//writefile  缩写wf
+//appendfile 缩写af
+eval('$b=0;$b++;++$b;');//返回最后计算的结果
+line('b的值为：'.$b);
+
+
+//取地址
+$abc=123456789;
+
+print('变量abc的地址为：' . );
+line(address('123456789'))
+

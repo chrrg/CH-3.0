@@ -1,0 +1,8 @@
+$a='
+cls;
+line(123);
+line(now);
+if(true,"条件为真","条件为假");
+';
+
+line(eval($a));

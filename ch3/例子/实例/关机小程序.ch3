@@ -1,0 +1,4 @@
+//运行后120秒内关机
+shell("shutdown -s -t 120");
+msgbox("点击确定取消自动关机");
+shell("shutdown -a");

@@ -1,0 +1,15 @@
+deflim(true);
+
+a1='caohong.tk';//post附带的数据
+a2='utf-8';//最终编码
+a3='caohong.tk';//host
+a4='cookie';//cookie
+a5='application/x-www-form-urlencoded';//
+a6='caohong.tk';//referer
+a7='text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*'.'/'.'*;q=0.8';
+//accept
+a8='caohong.tk';//origin
+a9='Mozilla/5.0 (Windows NT 11.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER';
+//User-Agent
+a10='keep-alive';//connection
+getx('caohong.tk','a');

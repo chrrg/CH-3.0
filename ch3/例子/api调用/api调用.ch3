@@ -1,0 +1,32 @@
+$a=creapi("dll","user32");//读取dll文件的地址
+
+$b=getapi($a,"MessageBoxA");
+
+defapi("msg2",$b);
+msg2(0, "这是动态调用API函数显示的MSGBOX内容，下面将要在作面画一笔。", "API信息提示", 0);
+
+defapi("GetDesktopWindow",getapi($a,"GetDesktopWindow"));
+defapi("GetWindowDC",getapi($a,"GetWindowDC"));
+
+$gdi32=creapi("dll","gdi32");//读取dll文件的地址
+
+defapi("LineTo",getapi($gdi32,"LineTo"));
+defapi("MoveToEx",getapi($gdi32,"MoveToEx"));
+defapi("CreatePen",getapi($gdi32,"CreatePen"));
+defapi("SelectObject",getapi($gdi32,"SelectObject"));
+//defapi将函数重定向到api函数的地址
+
+$desktop = GetDesktopWindow();
+$desktopDC = GetWindowDC($desktop);
+$pen=CreatePen(0,15,0);//创建一支画笔
+SelectObject($desktopDC,$pen);//将画笔给桌面画板
+
+	MoveToEx($desktopDC,100,100,0);//在屏幕上移动画笔位置(100,100)
+	for ($i=0,$i<1000,$i=$i+50,
+		$rand = int($i+rand(0,200));//生成随机数
+		$rand2 = int($i+rand(0,200));//生成随机数
+		LineTo($desktopDC,$rand,$rand2);
+		doevents;//将控制权转移到程序(可省略)
+	);
+
+//在屏幕上画笔位置面一条随机曲线

@@ -1,0 +1,8 @@
+cls;
+
+
+
+get('caohong.tk',10);//ºÚµ•get£¨≥¨ ±10√Î
+
+
+post('caohong.tk');//ºÚµ•post

@@ -1,0 +1,9 @@
+randomize;//初始化随机数
+$a=rnd;//随机赋值，确保a变量内容唯一
+cls;
+def(seta,$b1,$b2,
+	eval(address($b1)."='".$b2."'");
+	//address函数通过内容值来获取变量名
+);
+seta($a,"caohong");
+msgbox($a);

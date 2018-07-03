@@ -1,0 +1,38 @@
+$a=123;//初始化变量
+
+
+//switch判断的不一定是常量
+switch($a,
+	123,msgbox('switch123');exit,
+	456,msgbox('456');exit,
+	123,msgbox('also123');exit,
+	
+	msgbox('switch执行到最后');,void//void是一个空函数(仅为了保持switch代码语法)
+);//switch每一个都判断，可用exit()提前推出。
+
+case($a,
+	123,msgbox('case123'),
+	456,msgbox('456'),
+	123,msgbox('also123'),
+	msgbox('case全部不成立执行');
+);//case匹配到一个后不会再进行后续的判断，会直接跳出case语句体。
+
+
+$res = case($a,
+	123,456,
+	456,789,
+	789,123,
+	'都不是'
+);//任何语句体都可以有返回值。
+
+msgbox('case返回：'.$res);
+
+deflim(true);//取消强制变量$符号a和$a是不同变量
+
+a=switch(
+b=456,
+45,'46',
+if(b,'456';exit;),'33',
+4567,'45'
+);
+line('输出a为：'.a);

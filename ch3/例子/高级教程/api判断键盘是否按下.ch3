@@ -1,0 +1,20 @@
+$a=creapi("u","user32");//读取dll文件的地址
+$b=getapi($a,"GetAsyncKeyState");
+defapi("key",$b);//定义需要的api
+key(65);key(66);//检测前，初始化这两个键，防止误操作
+
+re(1000,
+cls;
+	if(key(65)!=0,//65为A对应的ascii码，可用asc("A")来输出65
+		line("你按下了A键！按B键退出检测！");
+	,
+		line("请按下A键！按B键退出检测！");
+	);
+	if(key(asc("B"))!=0,//按B键停止
+		line("已退出检测！");
+		exit;
+	);
+	delay(10);
+);//65对应了键盘的A键
+line("检测完成！");
+//若需要用户输入数据用inputbox函数

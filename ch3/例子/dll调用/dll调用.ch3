@@ -1,0 +1,8 @@
+$a=creapi("aadb",apppath."chdll.dll");//读取dll文件地址
+$b=getapi($a,"ShowDlg");//读取dll文件内showdlg函数的入口地址
+defapi("ShowDlg",$b);//定义showdlg函数的入口地址为ShowDlg函数
+re(5,
+	ShowDlg();//调用dll内的函数并输出返回值
+);//调用5次dll中的函数
+
+//freeapi($a);释放api引用

@@ -1,0 +1,12 @@
+$a=2;
+$a=2^10;
+print("2的10次方为：");
+print($a);
+print(crlf);
+$b=25;
+$c=7;
+print("取余为：");
+print($b%$c);
+print(crlf);
+
+print(35\3);//对两个数作除法并返回一个整数。 

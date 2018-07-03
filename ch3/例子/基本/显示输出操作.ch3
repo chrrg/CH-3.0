@@ -1,0 +1,1 @@
+$i=0;do($i++;cls;line(now);line("ÔËÐÐÖÐ¡£¡£¡£");doevents,$i>5000);

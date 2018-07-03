@@ -1,0 +1,15 @@
+deflim(true);
+res1=123.456;
+res2='123'.'456';
+res3=(1+2==3);
+res4=xyz('res3');
+res5='test';
+$e=0;
+switch(true,
+	res1!='123.456',msgbox('≤‚ ‘“Ï≥£1°£');$e++,
+	res2!=123456,msgbox('≤‚ ‘“Ï≥£2°£');$e++,
+	res3!=true,msgbox('≤‚ ‘“Ï≥£3°£');$e++,
+	res4!=true,msgbox('≤‚ ‘“Ï≥£4°£');$e++,
+	address('test')!='res5',msgbox('≤‚ ‘“Ï≥£5°£')$e++,
+);
+msgbox('≤‚ ‘ÕÍ≥…£°¥ÌŒÛ ˝£∫'.$e);

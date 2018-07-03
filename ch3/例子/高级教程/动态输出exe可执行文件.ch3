@@ -1,0 +1,24 @@
+$new=false;//这里为false即使用新方法，true则旧方法
+
+if ($new,
+	$path = 'C:\Users\caoho\Desktop\ch3\例子\高级教程\垃圾回收gc.ch3';
+	$target='C:\Users\caoho\Desktop\ch3\例子\高级教程\垃圾回收gc.exe';
+	if(existfile($path);,
+		$text='link.exe makeall "3.0.7"|"'.$path.'"|"'.$target.'"';
+		cls;//上面的3.0.7为link.exe的内核版本号，必须正确
+		line($text);
+		//msgbox($text);
+		shell($text);//此方法已过时，新方法已上来：
+	,
+		msgbox("找不到：".$path);
+	);
+,
+	//现在：
+	cls();
+	$a="re(3,msgbox('弹三次'););";
+	line($a);
+	line("现在无需依赖link.exe，直接就能输出exe文件啦！");
+	$targetpath=apppath . "compiletest.exe";
+	$res=compile($a,$targetpath);
+	if($res,msgbox("成功！");,msgbox("失败!");)
+);

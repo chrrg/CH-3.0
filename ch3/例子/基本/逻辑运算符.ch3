@@ -1,0 +1,35 @@
+$a=true;//定义a变量为真
+print("a为：");
+print($a);//输出a，此时输出a的真假值
+print(crlf);//crlf是换行函数，返回一个换行符
+$b=false;//定义b变量为假
+print("b为：");
+print($b);
+print(crlf);
+print("True 与 False结果为：");
+print($a & $b);
+print(crlf);
+print("False 与 True结果为：");
+print($a & $b);
+print(crlf);
+print("False 与 False结果为：");
+print($b & $b);
+print(crlf);
+print("True 与 True结果为：");
+print($a & $a);
+print(crlf);
+print("True 或 False结果为：");
+print($a | $b);
+print(crlf);
+print("False 或 True结果为：");
+print($a | $b);
+print(crlf);
+print("False 或 False结果为：");
+print($b | $b);
+print(crlf);
+print("True 或 True结果为：");
+print($a | $a);
+
+print(crlf);//输出换行符
+print("False | (False & True)结果为：");//括号提高运算优先级
+print(false | (false & true));

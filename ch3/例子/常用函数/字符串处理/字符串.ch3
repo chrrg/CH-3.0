@@ -1,0 +1,43 @@
+$a='123';
+
+
+len($a);//返回$a 的长度即3
+
+//split 分割字符串
+split("123fabcdeabefgafs","a",0);//返回  123f
+split("123fabcdeabefgafs","a",1);//返回  bcde
+split("123fabcdeabefgafs","a",2);//返回  befg
+split("123fabcdeabefgafs","a",3);//返回  fs
+
+
+howmuch("abcavdvdav","a");//返回3 即在第一个参数里出现了3次a
+much("abc123","b");//返回true,即在abc123中出现了b
+much("abc123","d");//返回false
+
+string(10,"a");//输出aaaaaaaaaa
+
+//inputbox("你好");//启动一个输入框，返回按下确认后输入的值
+//inputbox("你好","我是标题","默认内容");
+
+ 
+
+left("abcdefgb",3);//返回abc  从左边截取3个字符
+right("abcdefgb",3);//返回fgb  从左边截取3个字符
+mid("abcdefg",3,4);//返回cdef 从abcdefg的第3位开始截取4个字符
+
+asc("{");//返回123  返回一个符号的ascii码
+chr(123);//返回{    通过ascii码返回对应的字符
+
+replace("abcdefg","ab","ch");//返回chcdefg
+
+strreverse("abcdefg");//返回 gfedcba  字符串反转
+ucase("abc");//返回ABC
+lcase("ABc");//返回abc
+
+instr(1,"abcdefghi","e");//返回从第1位开始找e的位置，即第5个
+instr(6,"abcdefghi","e");//返回从第6位开始找e的位置，找不到返回0
+//instrrev();  反查找  从右往左开始找
+
+format("0.25","percent");//返回25.00%   格式化文本
+format(now(),"yyyy?mm?dd hh:mm:ss");//返回 2018?06?12 23:13:31
+

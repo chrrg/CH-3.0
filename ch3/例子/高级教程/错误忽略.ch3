@@ -1,0 +1,24 @@
+
+if(msgbox("按确认报错并退出，取消会忽略错误！",1)==1,
+	msgbox(1/0);
+	msgbox("在实际exe运行中由于报错，此行不会被执行！");
+,
+	error(false);//忽略错误,意思为实际执行exe时不会导致意外退出
+	//true为不会略错误，默认true
+	
+	msgbox(1/0);
+	msgbox("错误被忽略！");//错误被忽略
+);
+
+if(msgbox("按确认继续try实验，取消则退出程序！",1)==1,
+error(false);
+	try(
+		msgbox(1/0);
+	,$e,//将捕获到的错误信息存入e变量
+		msgbox($e);//若try执行完有错误将执行此代码
+		//单个获取错误号-100为程序未定义的错误
+		//errnumber获取错误号
+		line(errnum);
+		line(errdes);
+	);
+);
