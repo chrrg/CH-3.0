@@ -1,0 +1,3 @@
+$a=postx("http://352b.host3v.net/");
+
+msgbox($a);
